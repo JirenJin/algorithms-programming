@@ -4,6 +4,7 @@ import random
 f = open("kargerMinCut.txt", 'r')
 # get each row of the gragh ajaciency list
 graph = [line.strip("\r\n") for line in f.readlines()]
+f.close()
 
 # get a dictionaly whose keys are each vertice of the graph
 # value are edges.
@@ -46,7 +47,7 @@ def find_min_cut(graph_dict):
 
 x = float('inf')
 # rerun the function N times, to find the minimum cut
-for i in range(1000):
+for i in range(200):
     # in each loop, we have to ensure that the graph is not changed
     graph_test = copy.deepcopy(graph_dict)
     result = find_min_cut(graph_test)
