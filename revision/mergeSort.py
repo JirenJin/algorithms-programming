@@ -50,5 +50,6 @@ def mergeSort(array):
 if __name__ == '__main__':
     import random
     test = [random.randrange(10000) for row in range(100)]
+    print test
     mergeSort(test)
     print test
